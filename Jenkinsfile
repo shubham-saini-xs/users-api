@@ -1,4 +1,4 @@
-@Library('nginx-deployment-lib') _ 
+@Library('jsl-helm-nginx') _ 
 
 def deploymentConfig = [ 
     image: 'nginx:alpine' 
