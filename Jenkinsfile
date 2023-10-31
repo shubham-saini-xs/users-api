@@ -8,13 +8,13 @@ def deploymentConfig = [
 pipeline { 
     agent any
     environment {
-        KUBECONFIG = '/home/xs309-shusai/Downloads/dataops-cluster-k8s'
+        KUBECONFIG = '/home/xs309-shusai/Documents/config'
     }
     stages {
         stage('Connect to k8s cluster') {
             steps {
                 script {
-                    sh "export KUBECONFIG=\$KUBECONFIG"
+                    sh "export KUBECONFIG=$KUBECONFIG"
                 }
             }
         }  
