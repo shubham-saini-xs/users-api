@@ -8,13 +8,13 @@ def deploymentConfig = [
 pipeline { 
     agent any
     environment {
-        KUBECONFIG = credentials('1')
+        KUBECONFIG = credentials('kubeconfig-credential')
     }
     stages {
         stage('Connect to k8s cluster') {
             steps {
                 script {
-                    withCredentials([file(credentialsId: '1', variable: 'KUBECONFIG')]) {
+                    withCredentials([file(credentialsId: 'kubeconfig-credential', variable: 'KUBECONFIG')]) {
                     sh "export KUBECONFIG=$KUBECONFIG"
                     }
                 }
