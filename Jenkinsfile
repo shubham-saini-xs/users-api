@@ -8,7 +8,7 @@ def deploymentConfig = [
 pipeline { 
     agent any
     environment {
-        KUBECONFIG = '/home/xs309-shusai/.kube/config'
+        KUBECONFIG = '/home/xs309-shusai/Documents/config'
     }
     stages {
         stage('Connect to k8s cluster') {
