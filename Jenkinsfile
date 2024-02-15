@@ -1,7 +1,7 @@
 @Library('jsl-helm-nginx') _ 
 
 def deploymentConfig = [ 
-    image: 'nginx:perl' 
+    image: 'nginx:latest' 
     // Add other custom values as needed 
 ] 
   
