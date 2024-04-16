@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: users-api-nginx
-  namespace: "default"
+  namespace: "backstage"
   labels:
     app.kubernetes.io/name: nginx
     app.kubernetes.io/instance: users-api
@@ -25,7 +25,7 @@ spec:
     spec:
       automountServiceAccountToken: false
       shareProcessNamespace: false
-      serviceAccountName: default
+      serviceAccountName: backstage-service-account
       affinity:
         podAffinity: 
         podAntiAffinity:
